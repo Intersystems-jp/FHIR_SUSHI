@@ -1,0 +1,58 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "birthPlace",
+  "url": "http://isc-demo/fhir/StructureDefinition/patient-birthPlace",
+  "version": "0.1.0",
+  "name": "BirthPlace",
+  "title": "誕生地",
+  "status": "active",
+  "description": "生まれた場所をstring型で表現する",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "誕生地",
+        "definition": "生まれた場所をstring型で表現する"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://isc-demo/fhir/StructureDefinition/patient-birthPlace"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

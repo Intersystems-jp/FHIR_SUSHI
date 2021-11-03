@@ -1,0 +1,18 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "BirthPlaceSearchParameter",
+  "url": "http://isc-demo/fhir/SearchParameter/patient-birthPlace",
+  "version": "0.0.1",
+  "name": "birthPlace",
+  "status": "active",
+  "description": "誕生値検索のパラメータ",
+  "code": "birthPlace",
+  "base": [
+    "Patient"
+  ],
+  "type": "string",
+  "expression": "Patient.extension.where(url='http://isc-demo/fhir/StructureDefinition/patient-birthPlace').value",
+  "comparator": [
+    "eq"
+  ]
+}
